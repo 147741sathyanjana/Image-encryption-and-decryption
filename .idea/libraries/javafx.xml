@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="javafx">
+    <CLASSES>
+      <root url="jar://$PATH_TO_FX$/javafx.web.jar!/" />
+      <root url="jar://$PATH_TO_FX$/javafx.swing.jar!/" />
+      <root url="jar://$PATH_TO_FX$/javafx.media.jar!/" />
+      <root url="jar://$PATH_TO_FX$/javafx.graphics.jar!/" />
+      <root url="jar://$PATH_TO_FX$/javafx.fxml.jar!/" />
+      <root url="jar://$PATH_TO_FX$/javafx.controls.jar!/" />
+      <root url="jar://$PATH_TO_FX$/javafx.base.jar!/" />
+      <root url="jar://$PATH_TO_FX$/javafx-swt.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://C:/Program Files/openjfx-18_windows-x64_bin-sdk/javafx-sdk-18/javafx.base" />
+      <root url="file://C:/Program Files/openjfx-18_windows-x64_bin-sdk/javafx-sdk-18/javafx.controls" />
+      <root url="file://C:/Program Files/openjfx-18_windows-x64_bin-sdk/javafx-sdk-18/javafx.fxml" />
+      <root url="file://C:/Program Files/openjfx-18_windows-x64_bin-sdk/javafx-sdk-18/javafx.graphics" />
+      <root url="file://C:/Program Files/openjfx-18_windows-x64_bin-sdk/javafx-sdk-18/javafx.media" />
+      <root url="file://C:/Program Files/openjfx-18_windows-x64_bin-sdk/javafx-sdk-18/javafx.swing" />
+      <root url="file://C:/Program Files/openjfx-18_windows-x64_bin-sdk/javafx-sdk-18/javafx.web" />
+    </SOURCES>
+  </library>
+</component>

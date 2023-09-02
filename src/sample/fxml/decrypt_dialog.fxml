@@ -1,0 +1,49 @@
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane fx:controller="sample.controllers.DecryptController" xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@../styles/styles.css" maxHeight="-Infinity">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <Label styleClass="heading" textAlignment="CENTER" text="Decrypt Image"/>
+            <Label style="-fx-font-size: 14; -fx-text-alignment: center;"
+                   text="Image will be displayed here once it has been decrypted..." wrapText="true" fx:id="lblNotice"/>
+            <ImageView fx:id="decryptedImage" />
+            <HBox alignment="CENTER" spacing="10">
+                <Button styleClass="btn" onAction="#handleBack">
+                    Back
+                </Button>
+                <Button styleClass="btn" onAction="#handleSelectFile">
+                    Select Encrypted Image
+                </Button>
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="Secret Key"/>
+                <TextField styleClass="txtField" promptText="Pre-known secret key" fx:id="keyField" maxWidth="150"/>
+                <Button styleClass="btn" onAction="#handleDecrypt" fx:id="btnDecrypt">
+                    Decrypt
+                </Button>
+            </HBox>
+
+            <VBox alignment="CENTER" spacing="10" fx:id="vBoxDecrypt">
+                <Label fx:id="lblStatus" style="-fx-font-size: 16; -fx-text-alignment: center;"/>
+                <Button styleClass="btn" onAction="#handleDownload" fx:id="btnDownload">
+                    Download
+                </Button>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

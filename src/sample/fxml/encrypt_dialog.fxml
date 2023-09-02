@@ -1,0 +1,51 @@
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane fx:controller="sample.controllers.EncryptController" xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@../styles/styles.css" maxHeight="-Infinity">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <Label styleClass="heading" textAlignment="CENTER" text="Encrypt Image"/>
+            <Label style="-fx-font-size: 14; -fx-text-alignment: center;"
+                   text="Selected image will be displayed here..." fx:id="lblNotice"/>
+            <ImageView fx:id="selectedImage" />
+            <HBox alignment="CENTER" spacing="10">
+                <Button styleClass="btn" onAction="#handleBack">
+                    Back
+                </Button>
+                <Button styleClass="btn" onAction="#handleSelectImage">
+                    Select Image
+                </Button>
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="Secret Key"/>
+                <TextField styleClass="txtField" promptText="Your secret key" fx:id="keyField" maxWidth="150"/>
+                <Button styleClass="btn" onAction="#handleEncrypt" fx:id="btnEncrypt">
+                    Encrypt
+                </Button>
+            </HBox>
+            <Label style="-fx-font-size: 12; -fx-wrap-text: true; -fx-text-alignment: center; -fx-max-width: 500;"
+                   text="A secret key is a piece of information or parameter that is used to encrypt and decrypt messages in a symmetric, or secret-key, encryption. So please bear this key in mind as it's required when decrypting the image."/>
+
+            <VBox alignment="CENTER" spacing="10" fx:id="vBoxEncrypt">
+                <Label fx:id="lblStatus" style="-fx-font-size: 16; -fx-text-alignment: center;"/>
+                <Button styleClass="btn" onAction="#handleDownload" fx:id="btnDownload">
+                    Download
+                </Button>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>
